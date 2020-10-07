@@ -1,0 +1,83 @@
+/* .wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .75em .75em 0;
+}
+details[open] {
+    padding: 0.75em;
+}
+details[open] summary {
+    box-shadow: 0 5px 10px rgba(99,99,99,.3);
+    margin-bottom: 1em;
+    outline: none;
+}
+summary {
+    font-weight: bold;
+    margin: -.75em -.75em  0;
+    padding: 0.75em;
+    background: steelblue;
+    color: #ffffff;
+}
+summary::marker {
+    color: red;
+}
+summary::-webkit-details-marker {
+    color: red;
+}
+summary:focus {
+    outline:  none;
+} */
+/* Initialize */
+* {
+    box-sizing: border-box;
+}
+/* game screen */
+body {
+    height: 100vh;
+    margin: 0;
+}
+main {
+    width: 80%;
+    max-width: 50em;
+    margin: 2em auto;
+    text-align: center;
+}
+.graph {
+    --rightAnswer:0%;
+    width: 100%;
+    height: 2em;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: repeating-linear-gradient(90deg,transparent 0, transparent 9.5%,#ccc 0, gray 10%),
+                linear-gradient(90deg, green 0, lightgreen var(--rightAnswer),  transparent 0 );
+}
+
+/* 'game over' screen */
+.game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(99,110,99,.9);
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.win-lose-message {
+    font-size: calc(20px + 3vw);
+    margin-bottom: 1em;
+    color: brown;
+    letter-spacing: 5px;
+    background: whitesmoke;
+    padding: .4em .9em;
+    border-radius: .3em;
+}
+.start-again-btn {
+    padding: .4em .9em;
+    font-size: 1.2rem;
+}
